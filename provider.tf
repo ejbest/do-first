@@ -1,11 +1,5 @@
 terraform {
-  backend "s3" {
-    skip_region_validation      = true
-    skip_credentials_validation = true
-    skip_get_ec2_platforms      = true
-    skip_requesting_account_id  = true
-    use_path_style              = true
-  }
+  
   required_providers {
     vault = {
       source  = "hashicorp/vault"
