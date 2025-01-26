@@ -1,5 +1,5 @@
 terraform {
-  
+
   required_providers {
     vault = {
       source  = "hashicorp/vault"
@@ -15,11 +15,11 @@ terraform {
 
 provider "vault" {
   skip_tls_verify = true
-  address         = local.vault_address
+  address         = var.vault_address
   token           = var.vault_token
 }
 
 
-data "vault_generic_secret" "gcp_credentials" {
-  path = "ejbest/gcp"
-}
+# data "vault_generic_secret" "gcp_credentials" {
+#   path = "ejbest/gcp"
+# }
