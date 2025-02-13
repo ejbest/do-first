@@ -1,3 +1,4 @@
+import csv
 from handlers import GoogleWorkspace
 
 key_file_path = "key.json"
@@ -11,7 +12,8 @@ google_client = GoogleWorkspace(
     customer_id=customer_id,
 )
 
-access_token = google_client.auth()
+# Call the function to create users
+users = google_client.list_users()
 
-print("Listing users")
-google_client.list_users()
+# Print response
+print(users)
